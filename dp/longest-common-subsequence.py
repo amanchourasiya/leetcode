@@ -18,7 +18,7 @@ class Solution:
                     dp[row][col] = 1 + dp[row-1][col-1]
                 else:
                     dp[row][col] = max(dp[row-1][col], dp[row][col-1])
-
+        #print(dp)
         return ''.join(self.traceback(dp,R,C, text1,text2)[::-1]) 
 
         
