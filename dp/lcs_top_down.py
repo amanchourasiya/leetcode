@@ -30,4 +30,4 @@ def find_lcs_length(str1, str2, len1, len2):
     
     return ''.join(res)
 
-print(find_lcs_length("AGGTAB",  "GXTXAYB", 6,7 ))
+print(find_lcs_length("mbadm",  "mdabm", 5,5 ))
