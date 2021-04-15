@@ -6,6 +6,7 @@ def solve(arr, i, j):
         return 0
     if dp.get((i,j), -1) != -1:
         return dp[(i,j)]
+    print(i,j)
     '''if j-i == 1:
         dp[(i,j)] = arr[i] *2
         return dp[(i,j)]
