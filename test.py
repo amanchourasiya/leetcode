@@ -1,23 +1,21 @@
-# Python program to find maximum contiguous subarray
+t = int(input())
 
-# Function to find the maximum contiguous subarray
-#from sys import maxint
-def maxSubArraySum(a,size):
-	
-	max_so_far = -100 - 1
-	max_ending_here = 0
-	
-	for i in range(0, size):
-		max_ending_here = max_ending_here + a[i]
-		if (max_so_far < max_ending_here):
-			max_so_far = max_ending_here
+for _ in range(t):
+    def getNterm(n):
+        #print(n)
+        return (n* (n+1)) //2
+        
+    g = int(input())
+    
+    res = 1
+    for i in range(1,g):
+        nterm = getNterm(i)
+        if nterm >= g:
 
-		if max_ending_here < 0:
-			max_ending_here = 0
-	return max_so_far
-
-# Driver function to check the above function 
-a = [-13, -3, -25, -20, -3, -16, -23, -12, -5, -22, -15, -4, -7]
-print ("Maximum contiguous sum is", maxSubArraySum(a,len(a)))
-
-#This code is contributed by _Devesh Agrawal_
+            break
+        if (g-nterm) % (i+1) == 0:
+            #print('ans')
+            res+=1
+            
+    print(res)
+    
