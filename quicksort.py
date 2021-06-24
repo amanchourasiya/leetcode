@@ -24,10 +24,12 @@ def partition(arr, low, high):
 def quickSort(arr, start, end):
     if start < end:
         p = partition(arr, start, end)
+        print(arr, arr[p])
         quickSort(arr, start, p-1)
         quickSort(arr, p+1, end)
         
 
-arr = [10,3,4,23,2,3,4,5]
+#arr = [10,3,4,23,2,3,4,5, 50]
+arr = [1,2,3,4,5]
 quickSort(arr, 0, len(arr)-1)
 print(arr)

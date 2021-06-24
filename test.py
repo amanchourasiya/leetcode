@@ -1,21 +1,17 @@
-t = int(input())
+def MainProg(f):
+    m = {}
+    def InnerProg(num):
+        if num not in m:
+            m[num] = f(num)
+        return m[num]
 
-for _ in range(t):
-    def getNterm(n):
-        #print(n)
-        return (n* (n+1)) //2
-        
-    g = int(input())
-    
-    res = 1
-    for i in range(1,g):
-        nterm = getNterm(i)
-        if nterm >= g:
+    return InnerProg
 
-            break
-        if (g-nterm) % (i+1) == 0:
-            #print('ans')
-            res+=1
-            
-    print(res)
-    
+#@MainProg
+def Cal(num):
+    if num == 0:
+        return 1
+    else:
+        return num **2*Cal(num-1)
+
+print(Cal(3))

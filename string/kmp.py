@@ -13,7 +13,7 @@ def findPattern(text, pattern):
         else:
             if pattern[0] == pattern[i]:
                 lps[i] = 1
-
+    print(lps)
     lp = -1
     t = 0
     while t < len(text):

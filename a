@@ -1,0 +1,45 @@
+[root@node1 otel]# k describe svc hello-world
+Name:                     hello-world
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=nginx
+Type:                     NodePort
+IP Families:              <none>
+IP:                       10.233.49.252
+IPs:                      10.233.49.252
+Port:                     <unset>  8080/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  30036/TCP
+Endpoints:                10.233.92.96:80,172.29.87.31:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Port:                     <unset>  8080/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  30036/TCP
+Endpoints:                10.233.92.96:80,172.29.87.31:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+[root@node1 otel]# k describe svc jaeger-query
+Name:                     jaeger-query
+Namespace:                default
+Labels:                   app=jaeger
+                          app.kubernetes.io/component=query
+                          app.kubernetes.io/name=jaeger
+Annotations:              <none>
+Selector:                 app=cpp-dev-pod
+Type:                     NodePort
+IP Families:              <none>
+IP:                       10.233.45.164
+IPs:                      10.233.45.164
+Port:                     query-http  8080/TCP
+TargetPort:               16686/TCP
+NodePort:                 query-http  30007/TCP
+Endpoints:                10.233.90.141:16686
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>

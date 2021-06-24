@@ -1,0 +1,9 @@
+Entities
+
+1. User (id, debt, )
+2. Expense (type, list users, bearer, )
+3. Application (Singleton), queryall, queryuser ,map[id]user 
+4. ExpenseProcessor
+
+
+user1.debt[userid] = amount
